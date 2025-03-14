@@ -1,209 +1,130 @@
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verkkosivuni</title>
+    <style>
+        body {
+            background-image: linear-gradient(white, grey, black);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header-tyylit */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
 
-<style>
-  body {
-    font-family: Verdana;
-  }
-</style>
-<style>
-  .minä-button {
-    background-color: pink;
-    color: black;
-    border: none;
-    border-radius: 18px;
-    cursor: pointer; 
-    font-weight: bold;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-    vertical-align: top;
-     }
-  .minä-button:hover {
-    background-color: aquamarine;
-  }
-</style>
+        /* Navigaatio */
+        nav {
+            background-color: #3f5a41;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
 
-<style>
-  .työkokemus-button {
-    background-color: pink;
-    color: black;
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-left: 10px;
-    vertical-align: top;
-    margin-right: 10px;
-  }
-  .työkokemus-button:hover {
-    background-color: aquamarine;
-  }
-</style>
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
 
-<style>
-  .koulutus-button {
-    background-color: pink;
-    color: black;
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-    vertical-align: top;
-  }
-  .koulutus-button:hover {
-    background-color: aquamarine;
-  }
-</style>
+        /* Main-tyylit */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
 
-<style>
-  .portfolio-button {
-    background-color: pink;
-    color: black;
-    border: none;
-    font-weight: bold;
-    border-radius: 18px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-    vertical-align: top;
-  }
-  .portfolio-button:hover {
-    background-color: aquamarine;
-  }
-</style>
+        /* Footer-tyylit */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+        }
 
-<style>
-  body {
-    background-image: linear-gradient(white, grey, black);
-  }
-</style>
+        .teksti {
+          text-align: center;
+          width: 50%;
+          margin-left: 25%;
+          margin-right: 25%;
+        }
 
-<nav>
-<a href="minä.html">
-  <button class="minä-button">
-    Minä
-  </button>
-</a>
+        .kukka {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+        }
 
-<a href="työkokemus.html">
-  <button class="työkokemus-button">
-    Työkokemus 
-  </button>
-</a>
+        .haaveilija {
+          height: 150px;
+          width: 200px;
+          border-radius: 30px;
+        }
 
-<a href="koulutus.html">
-  <button class="koulutus-button">
-    Koulutus
-  </button>
-</a>
+    </style>
+</head>
+<body>
 
-<a href="portfolio.html">
-  <button class="portfolio-button">
-    Portfolio
-  </button>
-</a>
-</nav>
+    <header>
+        <h1>Minun polkuni – Taidot, tarina ja tulevaisuus</h1>
+    </header>
 
+    <nav>
+        
+            <a href="index.html">Etusivu</a>
+            <a href="minä.html">Minä</a>
+            <a href="koulutus.html">Koulutus</a>
+            <a href="työkokemus.html">Työkokemus</a>
+            <a href="portfolio.html">Portfolio</a>   
+    </nav>
 
+    <main>
+            <div class="teksti">
+                <h2>Tekijätär ja unelmien työpaja</h2>
+                <p>
+                  Olipa kerran pieni maalaistyttö, joka kasvoi Joroisten kumpuilevissa maisemissa. Hänen sormensa oppivat jo varhain tuntemaan maan, puun ja työkalut – ne eivät pysyneet paikallaan, eivätkä hänen ajatuksensakaan.
+                  Hän rakasti nähdä työnsä jäljen, tuntea, miten hänen kätensä muuttivat ideat todellisuudeksi.</p>
+                
+                <p>Kun hän kasvoi, hän matkasi kaupunkiin oppimaan. Siellä hän ahersi ja oppi, mutta hänen mielensä vaelsi aina takaisin kotikonnuille, sinne missä luovuus sai vapaasti virrata. Lopulta hän palasi, mutta ei tyhjin käsin – hän toi mukanaan taidot ja sinnikkyyden, joilla voisi rakentaa mitä vain.
+                   Hän perusti itselleen työpajan, ei seinien sisään, vaan kaikkialle, minne hänen mielikuvituksensa kantoi. Hän rakasti vaihtelua, visioita, uusia haasteita. Hän ei pelännyt, jos ei jotakin osannut – hän opetteli. Hän ei lannistunut, jos jokin ei heti onnistunut – hän yritti uudelleen.
+                   Ja niin hän rakensi, nikkaroi, suunnitteli ja toteutti.</p> 
+                   
+                <p>Hän ei lukenut tarinoita, mutta hän eli ne. Jokainen työ, jokainen luotu esine tai korjattu kulma kertoi hänen tarinaansa – tarinaa, jossa kädet, sydän ja mieli loivat maailmaan jotakin uutta.
+                   Ja niin hänen työpajansa, joka ei ollut vain paikka vaan tapa elää, jatkoi kasvuaan – täynnä tekemisen iloa, sinnikkyyttä ja luovuutta, joka ei koskaan ehtynyt.</p>
+                
+                   <img class="haaveilija" src="Kuvat/haaveilija.jpg" alt="haaveileva tyttö">
+                  </div>
+            <img class="kukka" src="Kuvat/kukka.png" alt="kukka">
+    </main>
 
-<style>
-  button {
-    background-color: aquamarine;
-    color: black;
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 18px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
-    margin-left: 10px;
-    margin-right: 10px;
-    vertical-align: top;
-  }
-  button:hover {
-    background-color: pink;
-  }
-</style>
+    <footer>
+        <p>&copy; 2025 Verkkosivuni</p>
+        <p> Tänään on: <span id="paivamaara"></span></p>
+    </footer>
 
-  <style>
-    .muistiinpanot-button {
-    background-color: rgb(18, 233, 107);
-    color: black;
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-    vertical-align: top;
-   }
-  </style>
+  <script>
+      function paivitaPaivamaara() {
+          var paivamaara = new Date();
+          var paiva = paivamaara.getDate().toString().padStart(2, '0');
+          var kuukausi = (paivamaara.getMonth() + 1).toString().padStart(2, '0');
+          var vuosi = paivamaara.getFullYear();
+          var paivamaaraTeksti = paiva + '.' + kuukausi + '.' + vuosi;
+          
+          // Päivitä elementti, jossa id="paivamaara"
+          document.getElementById("paivamaara").textContent = paivamaaraTeksti;
+      }
 
-  <style>
-    .pääotsikko {
-      font-size: 50px;
-      font-weight: bold;
-      text-align: center;
-    }
-  </style>
+      // Päivitä päivämäärä heti sivun latauduttua
+      paivitaPaivamaara();
+  </script>
 
-<p class="pääotsikko">
-  Tähän on tulossa verkkosivun etusivu
-</p>
-
-<div class="image-container">
-    <img src="Kuvat/idea-3976295_640.png" alt="Kuva 1" width="150" height="150" >
-    <img src="kuva2.jpg" alt="Kuva 2" width="150" height="150">
-    <img src="kuva3.jpg" alt="Kuva 3" width="150" height="150">
-</div>
-<!-- asettelut -->
- <style>
-.image-container {
-  display: flex;
-  gap: 10px; /* Lisää väliä kuvien väliin */
-  justify-content: center;
-}
-
-.image-container img {
-  width: 100px; /* Muuta haluamasi koko */
-  height: auto;
-}
-</style>
-
-<h2>Hyödylliset linkit:
-</h2>
-
-<img src="Kuvat/youtube-667451_1280.png" alt="YouTube" width="80" height="40">
-
-<ul>
- <li><a href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank">
-  HTML ja CSS-kurssi- YouTube</a></li>
- <li><a href="https://www.youtube.com/watch?v=hrTQipWp6co" target="_blank"> 
-  GitHub</a></li>
-</ul>
+</body>
+</html>
 

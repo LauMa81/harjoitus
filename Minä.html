@@ -1,10 +1,111 @@
-<style>
-  body {
-    background-image: linear-gradient(white, grey, black);
-  }
-</style>
-<Nav>
-  <a href="index.html">Takaisin etusivulle</a> 
-</Nav>
 
-<img src="Kuvat/woman-7291658_640.png" alt="Naisen kasvot" width="150" height="200">
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verkkosivuni</title>
+    <style>
+        body {
+            background-image: linear-gradient(white, grey, black);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header-tyylit */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigaatio */
+        nav {
+            background-color: #3f5a41;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        /* Main-tyylit */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Kuvan ja tekstin viereen asettaminen */
+        .container {
+            display: flex;
+            align-items: center; /* Keskittää sisällön pystysuunnassa */
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .oma-kuva {
+            border-radius: 15px; /* Pyöristetyt kulmat */
+            border: 3px solid #3f5a41; /* Musta kehys */
+            box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3); /* Varjostus */
+            margin-right: 40px; /* Lisää tilaa kuvan ja tekstin väliin */
+            width: 200px; /* Määritä kuvan leveys */
+            height: auto; /* Kuvan korkeus säilyttää suhteensa */
+            filter: grayscale(0%);
+        }
+
+        /* Teksti, joka menee kuvan viereen */
+        .teksti {
+            max-width: 600px;
+        }
+
+        /* Footer-tyylit */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutustu minuun</h1>
+    </header>
+
+    <nav>
+        
+            <a href="index.html">Etusivu</a></li>
+    </nav>
+
+    <main>
+        <section class="container">
+            <img src="Kuvat/20240601_065432 (2).jpg" alt="Naisen kasvot" class="oma-kuva">
+            <div class="teksti">
+                <h2>Tekijä, visionääri ja sinnikäs oppija</h2>
+                <p>Olen Joroisista kotoisin oleva maalaistyttö, joka on kulkenut mutkikkaan, mutta antoisan polun työelämässä</p> 
+                <p>Opintieni alkoi hotelli- ja ravintola-alan koulutuksesta Kuopiossa, mutta vähitellen suuntauduin kaupan ja asiakaspalvelun pariin. 
+                   Työuran alkuvaiheiden jälkeen palasin takaisin Joroisiin, missä pääsen toteuttamaan intohimoani – tekemistä käsillä.</p>
+                <p>Olen tekijä, en lukija. Minulle fyysinen työ ja oman käden jäljen näkeminen ovat suurinta palkintoa. Rakastan remontointia, 
+                  nikkarointia ja kaikkea luovaa ongelmanratkaisua. En jää paikoilleni – minulla on aina jokin projekti meneillään.</p> 
+                <p>Työssäni viihdyn parhaiten monipuolisten ja vaihtelevien tehtävien parissa, joissa saan hyödyntää luovuuttani ja visiointikykyäni. 
+                  Näen mielessäni lopputuloksen ja teen sinnikkäästi töitä sen saavuttamiseksi. Jos en jotain osaa, opettelen – ja varmistan, että onnistun.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Verkkosivuni</p>
+    </footer>
+
+</body>
+</html>
