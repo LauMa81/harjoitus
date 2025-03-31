@@ -439,7 +439,7 @@
       /* Responsiivisuus: Mobiililaitteet */
       @media (max-width: 600px) {
         html {
-          font-size: 12px; /* 1rem = 12px */
+          font-size: 14px; /* 1rem = 12px */
       }
           .navbar {
               flex-direction: column;
@@ -449,7 +449,7 @@
           .navbar a {
               display: block;
               margin: 5px 0;
-              font-size: 0.8rem;
+              font-size: 1rem;
           }
       
           .signature {
@@ -486,11 +486,23 @@
           }
       
           .transition h2 {
-              font-size: 1.5rem;
+              font-size: 1.8rem;
           }
       
           .transition p {
-              font-size: 0.9rem;
+              font-size: 1rem;
           }
+
+          .content h2 {
+            font-size: 1.8rem; /* Sisällön otsikon fonttikoko mobiilissa */
+        }
+    
+        .content p {
+            font-size: 1rem; /* Sisällön tekstin fonttikoko mobiilissa */
+        }
+    
+        .contact-info p, .contact-form label, .contact-form input, .contact-form textarea {
+            font-size: 1rem; /* Yhteystietojen ja lomakkeen fonttikoko */
+        }
       }
    
