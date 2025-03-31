@@ -5,8 +5,12 @@
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             color: #333;
-            height: 100%;
             scroll-behavior: smooth;
+            background: url('images/IMG_3959.JPG') no-repeat center center/cover;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 400px;
+            width: 100%;
         }
         .navbar {
             position: fixed;
@@ -78,13 +82,14 @@
     }
 
         .hero {
-            height: 100vh;
-            background: url('images/IMG_3959.JPG') no-repeat center center/cover;
+            padding: 150px 0 0 0; /* Korjataan pilkku pisteeksi */
+            margin-top: 60px; /* Navigointipalkin korkeus */
             display: flex;
+            flex-direction: column;
             align-items: center;
-            flex-direction: row;
-            justify-content: center
-        }
+            justify-content: center;
+            text-align: center;
+    }
 
         .hero-text h1 {
           font-size: 1rem; /* Korjattu pilkku pisteeksi */ 
@@ -110,12 +115,13 @@
         padding: 5px;
       }
       
-        .transition {
-            position: relative;
-            background: #fff;
-            padding: 100px 20px;
-            text-align: center;
-        }
+      .transition {
+        position: relative;
+        background: #fff;
+        padding: 50px 20px;
+        text-align: center;
+        margin-top: 150px; /* Lisää tilaa yläpuolelle */
+    }
         .transition h2 {
             font-size: 2rem;
             margin-bottom: 20px;
@@ -476,13 +482,18 @@
               font-size: 0.8rem;
               max-width: 100%;
           }
+
+          .hero-text p {
+            font-size: 1rem; /* Tekstin fonttikoko mobiilissa */
+            line-height: 1.6; /* Lisää riviväliä luettavuuden parantamiseksi */
+        }
       
           .hero-image {
               height: 40vh; /* Kuva vie vähemmän tilaa mobiilissa */
           }
       
           .transition {
-              padding: 50px 10px;
+            margin-top: 70px; /* Lisää enemmän tilaa mobiililaitteilla */
           }
       
           .transition h2 {
