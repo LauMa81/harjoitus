@@ -6,32 +6,64 @@
             background-color: #f5f5f5;
             color: #333;
             scroll-behavior: smooth;
-            background: url('images/IMG_3959.JPG') no-repeat center center/cover;
-            background-attachment: fixed;
-            background-size: cover;
-            height: 400px;
-            width: 100%;
+            box-sizing: border-box;
         }
+
+        .parallax-etusivu {
+            background: url('images/IMG_3959.JPG') no-repeat center center fixed; /* Taustakuva */
+            background-size: cover; /* Skaalaa kuva täyttämään koko alue */
+            height: 100vh; /* Korkeus täyttää koko näkymän */
+            display: flex; /* Käytetään keskittämiseen */
+            flex-direction: column; /* Sisältö pystysuunnassa */
+            justify-content: center; /* Keskitetään sisältö pystysuunnassa */
+            align-items: center; /* Keskitetään sisältö vaakasuunnassa */
+            text-align: center; /* Keskitetään teksti */
+        }
+        
+        .parallax-etusivu .etusivun_teksti {
+            background-color: rgba(0, 0, 0, 0.5); /* Läpinäkyvä musta tausta */
+            color: white; /* Tekstin väri */
+            padding: 20px; /* Lisää sisäistä täytettä */
+            border-radius: 10px; /* Pyöristetyt kulmat */
+            max-width: 600px; /* Rajoitetaan tekstilaatikon leveys */
+            margin: 0 auto; /* Keskitetään tekstilaatikko */
+            font-size: 1rem; /* Tekstin koko */
+            line-height: 1.5; /* Riviväli */
+        }
+
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
             background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             z-index: 1000;
             font-family: "Sofia", sans-serif;
         }
         .navbar a {
             font-size: 1rem; /* 16px oletuksena */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;  
             color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;  color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
         }
+
+        /* Hamburger-menu */
+            .menu-toggle {
+                display: none; /* Piilotetaan oletuksena */
+                flex-direction: column;
+                cursor: pointer;
+            }
+
+            .menu-toggle .bar {
+                background-color: white;
+                height: 3px;
+                width: 25px;
+                margin: 4px 0;
+                transition: 0.3s;
+            }
+
         .icon {
             position: fixed;
             top: 20px; /* Sijoitetaan yläreunaan */
@@ -79,49 +111,19 @@
             color: white;
             transform: rotate(-15deg);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-        .hero {
-            padding: 150px 0 0 0; /* Korjataan pilkku pisteeksi */
-            margin-top: 60px; /* Navigointipalkin korkeus */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-    }
-
-        .hero-text h1 {
-          font-size: 1rem; /* Korjattu pilkku pisteeksi */ 
-          text-align: center;
-      }
-      
-        .hero-text {
-          flex: 2; /* Tekstiosio vie 2/3 tilasta */
-          font-size: 0.8rem;
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-          color: white;
-          padding: 40px; 
-          margin: 20px;
-          background-color: rgba(0, 0, 0, 0.5); /* Musta tausta 50% läpinäkyvyydellä */
-          border-radius: 10px; /* Pyöristetyt kulmat */
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Varjo taustalle */  
-      }
-
-      .hero p {
-        margin: 5px;
-        padding: 5px;
-      }
-      
-      .transition {
-        position: relative;
+        }
+         
+        .transition {
+        position: fixed; /* Kiinnitetään osio pysyvästi alalaitaan */
+        bottom: 0;
+        left: 0;
+        width: 100%;
         background: #fff;
-        padding: 50px 20px;
         text-align: center;
-        margin-top: 150px; /* Lisää tilaa yläpuolelle */
-    }
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Varmistetaan, että osio näkyy muiden elementtien päällä */
+        }
+
         .transition h2 {
             font-size: 2rem;
             margin-bottom: 20px;
@@ -134,12 +136,14 @@
             background-size: cover;
             height: 400px;
             width: 100%;
+            background-attachment: fixed;
         }
 
                 /* Sisältö */
         .content {
             padding: 50px 20px;
             text-align: center;
+            background-color: #ddd;
         }
 
         .content h2 {
@@ -361,7 +365,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 50px 20px;
+            padding: 20px;
             gap: 20px;
         }
 
@@ -442,78 +446,68 @@
             margin-top: 20px;
         }
       
-      /* Responsiivisuus: Mobiililaitteet */
-      @media (max-width: 600px) {
-        html {
-          font-size: 14px; /* 1rem = 12px */
-      }
-          .navbar {
-              flex-direction: column;
-              padding: 10px;
-          }
-      
-          .navbar a {
-              display: block;
-              margin: 5px 0;
-              font-size: 1rem;
-          }
-      
-          .signature {
-              font-size: 3vw;
-              top: 5vw;
-              left: 5vw;
-              transform: rotate(-10deg);
-          }
-      
-          .hero {
-              flex-direction: column; /* Teksti ja kuva pinotaan päällekkäin */
-          }
-      
-          .hero-text {
-              padding: 20px;
-              text-align: center;
-          }
-      
-          .hero h1 {
-              font-size: 1.5rem;
-          }
-      
-          .hero p {
-              font-size: 0.8rem;
-              max-width: 100%;
-          }
+/* Piilotetaan navigointilinkit pienemmillä näytöillä */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Näytetään hamburger-menu */
+    }
 
-          .hero-text p {
-            font-size: 1rem; /* Tekstin fonttikoko mobiilissa */
-            line-height: 1.6; /* Lisää riviväliä luettavuuden parantamiseksi */
-        }
-      
-          .hero-image {
-              height: 40vh; /* Kuva vie vähemmän tilaa mobiilissa */
-          }
-      
-          .transition {
-            margin-top: 70px; /* Lisää enemmän tilaa mobiililaitteilla */
-          }
-      
-          .transition h2 {
-              font-size: 1.8rem;
-          }
-      
-          .transition p {
-              font-size: 1rem;
-          }
+    .navbar a {
+        display: none; /* Piilotetaan linkit oletuksena */
+    }
 
-          .content h2 {
-            font-size: 1.8rem; /* Sisällön otsikon fonttikoko mobiilissa */
-        }
-    
-        .content p {
-            font-size: 1rem; /* Sisällön tekstin fonttikoko mobiilissa */
-        }
-    
-        .contact-info p, .contact-form label, .contact-form input, .contact-form textarea {
-            font-size: 1rem; /* Yhteystietojen ja lomakkeen fonttikoko */
-        }
-      }
+    .navbar.active a {
+        display: block; /* Näytetään linkit, kun menu on aktiivinen */
+        margin: 10px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parallax-etusivu .etusivun_teksti {
+        max-width: 90%; /* Tekstilaatikko vie lähes koko leveyden */
+        font-size: 0.9rem; /* Pienennetään fonttikokoa */
+        padding: 15px; /* Pienennetään sisäistä täytettä */
+    }
+
+    .portfolio-grid, .recommendation-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Mukautetaan grid pienemmille näytöille */
+    }
+
+    .contact-section {
+        flex-direction: column; /* Asetetaan kontaktiosio pystysuuntaiseksi */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px; /* Pienennetään navigaation paddingia */
+    }
+
+    .parallax-etusivu .etusivun_teksti {
+        max-width: 100%; /* Tekstilaatikko vie koko leveyden */
+        font-size: 0.8rem; /* Pienennetään fonttikokoa entisestään */
+        padding: 10px; /* Pienennetään sisäistä täytettä */
+    }
+
+    .portfolio-item, .card {
+        padding: 10px; /* Pienennetään korttien sisäistä täytettä */
+    }
+
+    .contact-info, .contact-form {
+        max-width: 100%; /* Kontaktiosiot vievät koko leveyden */
+    }
+
+    .footer {
+        font-size: 0.8rem; /* Pienennetään footerin fonttikokoa */
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax-etusivu {
+        background-attachment: scroll; /* Poistetaan kiinteä tausta pienemmillä näytöillä */
+    }
+}
    
