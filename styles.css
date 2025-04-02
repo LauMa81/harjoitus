@@ -3,7 +3,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #6c926c;
+            background-color: #f1f5f1;
             color: #333;
             scroll-behavior: smooth;
             box-sizing: border-box;
@@ -30,13 +30,20 @@
 
 
         .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
-            z-index: 1000;
+            
+                display: flex; /* Käytetään flexbox-asettelua */
+                justify-content: center; /* Keskitetään sisältö vaakasuunnassa */
+                align-items: center; /* Keskitetään sisältö pystysuunnassa */
+                flex-wrap: wrap; /* Sallitaan rivinvaihto pienemmillä näytöillä */
+                position: fixed;
+                top: 0;
+                left: 0; /* Varmistetaan, että navbar alkaa vasemmasta reunasta */
+                width: 100%; /* Navbar vie koko näytön leveyden */
+                background: rgba(0, 0, 0, 0.8);
+                padding: 10px 20px; /* Lisää sisäistä täytettä */
+                z-index: 1000;
+                box-sizing: border-box; /* Sisällyttää paddingin elementin kokonaisleveyteen */
+            
         }
 
         .navbar a {
@@ -110,6 +117,17 @@
             transform: rotate(-15deg);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
+        /* Pienemmille näytöille */
+        @media (max-width: 768px) {
+        .signature {
+        position: absolute;
+        text-align: center; /* Keskitetään teksti */
+        margin-top: 10px; /* Lisätään hieman tilaa yläreunaan */
+        transform: none; /* Varmistetaan, että teksti pysyy suorassa */
+        font-size: 4vw;
+    }
+}
          
         .hero {
             background: url('images/IMG_3959.JPG') no-repeat center center fixed; /* Taustakuva */
@@ -234,9 +252,12 @@
         /* Portfolio-grid */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mukautuva grid */
+            gap: 20px; /* Väli laatikoiden välillä */
+            padding: 20px; /* Sisäinen täyte */
+            max-width: 1200px; /* Rajoitetaan gridin maksimileveys */
+            margin: 0 auto; /* Keskitetään grid vaakasuunnassa */
+            box-sizing: border-box; /* Sisällytetään padding laskentaan */
         }
 
         .portfolio-item {
@@ -246,6 +267,7 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
         }
 
         .portfolio-item img {
@@ -263,6 +285,16 @@
             font-size: 0.9rem;
             color: #666;
         }
+
+        @media (max-width: 768px) {
+            .portfolio-item p {
+                font-size: 0.9rem; /* Pienennetään fonttikokoa */
+                line-height: 1.5; /* Mukautetaan riviväliä */
+                margin-bottom: 8px; /* Pienennetään marginaalia */
+            }
+        }
+
+        
 
         /*Suosittelijat*/
 
@@ -537,8 +569,9 @@
     }
 
     .navbar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Muutetaan navigaatio pystysuuntaiseksi */
+        align-items: center; /* Keskitetään sisältö */
+        padding: 10px; /* Pienennetään paddingia */
     }
 
     .etusivun_teksti {
@@ -577,6 +610,45 @@
 
     .footer {
         font-size: 0.8rem; /* Pienennetään footerin fonttikokoa */
+    }
+}
+/* Pienemmille näytöille (max-width: 768px) */
+@media (max-width: 768px) {
+    .icon {
+        width: 50px; /* Pienennetään kuvakkeen leveys */
+        height: 50px; /* Pienennetään kuvakkeen korkeus */
+    }
+
+    .icon-link {
+        padding: 8px; /* Pienennetään sisäistä täytettä */
+    }
+
+    .icon-link i {
+        font-size: 20px; /* Pienennetään kuvakkeen kokoa */
+    }
+
+    .icon-text {
+        font-size: 0.7rem; /* Pienennetään tekstin kokoa */
+    }
+}
+
+/* Erittäin pienille näytöille (max-width: 480px) */
+@media (max-width: 480px) {
+    .icon {
+        width: 40px; /* Pienennetään kuvakkeen leveys entisestään */
+        height: 40px; /* Pienennetään kuvakkeen korkeus entisestään */
+    }
+
+    .icon-link {
+        padding: 6px; /* Pienennetään sisäistä täytettä entisestään */
+    }
+
+    .icon-link i {
+        font-size: 16px; /* Pienennetään kuvakkeen kokoa entisestään */
+    }
+
+    .icon-text {
+        font-size: 0.6rem; /* Pienennetään tekstin kokoa entisestään */
     }
 }
 
