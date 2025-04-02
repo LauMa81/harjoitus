@@ -282,6 +282,28 @@
             text-align: center; /* Keskitetään otsikko */
         }
 
+        .portfolio-item_alarivi {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .portfolio-item_alarivi img {
+            max-width: 50%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-item_alarivi h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-align: center; /* Keskitetään otsikko */
+        }
+
         /* Pienemmille näytöille (max-width: 768px) */
 @media (max-width: 768px) {
     .portfolio-item h3 {
