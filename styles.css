@@ -279,22 +279,29 @@
         .portfolio-item h3 {
             font-size: 1.2rem;
             margin-bottom: 10px;
+            text-align: center; /* Keskitetään otsikko */
         }
+
+        /* Pienemmille näytöille (max-width: 768px) */
+@media (max-width: 768px) {
+    .portfolio-item h3 {
+        font-size: 1rem; /* Pienennetään fonttikokoa */
+        margin-bottom: 8px; /* Pienennetään marginaalia */
+    }
+}
+
+/* Erittäin pienille näytöille (max-width: 480px) */
+@media (max-width: 480px) {
+    .portfolio-item h3 {
+        font-size: 0.9rem; /* Pienennetään fonttikokoa entisestään */
+        margin-bottom: 6px; /* Pienennetään marginaalia */
+    }
+}
 
         .portfolio-item p {
             font-size: 0.9rem;
             color: #666;
         }
-
-        @media (max-width: 768px) {
-            .portfolio-item p {
-                font-size: 0.9rem; /* Pienennetään fonttikokoa */
-                line-height: 1.5; /* Mukautetaan riviväliä */
-                margin-bottom: 8px; /* Pienennetään marginaalia */
-            }
-        }
-
-        
 
         /*Suosittelijat*/
 
